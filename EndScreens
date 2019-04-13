@@ -1,0 +1,36 @@
+void gOver () {
+  if (gameover == true) {
+    background (255, 0, 0) ;
+    fill (255) ;
+    textSize (50) ;
+    text ("Game Over", 0, 50) ;
+    textSize (25) ;
+    text ("To replay, close the tab and reopen it", 0, 150) ;
+    text ("A brief guide on how to die:", 0, 500) ;
+    text ("- Touch one of the perimeters of the window", 0, 525) ;
+    text ("- Touch one of the ingame (green) walls", 0, 550) ;
+    text ("- Touch one of the moving blocks", 0, 575) ;
+    if (endcause == 1) {
+      text ("Cause of Death: Hitting the Edge of the Window", 0, 80) ;
+      text ("Tip: Don't try to escape", 0, 110) ;
+    }
+    if (endcause == 2) {
+      text ("Cause of Death: Hitting the Internal Electric Walls", 0, 80) ;
+    }
+    if (endcause == 3) {
+      text ("Cause of Death: Hitting one of the flying blue blocks", 0, 80) ;
+      text ("Tip: Go to the edge of the path - It gives you more time", 0, 110) ;
+    }
+  }
+}
+
+void gWon () {
+  if (gamewon == true) {
+    background (0, 255, 0) ;
+    fill (0) ;
+    textSize (50) ;
+    text ("Game Won", 0, 50) ;
+    textSize (25) ;
+    text ("[Error 404 - Congratulatory Comment Not Found]", 0, 80) ;
+  }
+}
