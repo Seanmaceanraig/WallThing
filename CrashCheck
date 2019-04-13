@@ -1,0 +1,33 @@
+void crashCheck () {
+  if (playerx <= 0 || playerx >= 870 || playery <= 0 || playery >= 570) {                                         //Crash detection for the edge of the screen
+    gameover = true ;
+    endcause = 1 ;
+  }
+  if (playerx >= 265 && playerx <= 300 && playery >= 70) {                                                        //Crash detection for the first line (the left most one)
+    gameover = true ;
+    endcause = 2 ;
+  }
+  if (playerx >= 565 && playerx <= 600 && playery <= 500) {                                                       //Crash detection for the second line (the right most one)
+    gameover = true ;
+    endcause = 2 ;
+  }
+  if (playerx >= 605 && playery <= 30) {                                                                          //Crash detection for the Win Zone, defining if the player has won or not
+    gamewon = true ;
+  }
+  if (playery >= 276 && playery <= 316 && playerx >= obstaclei - 30 && playerx <= obstaclei) {                    //Crash Detection for Obstacle 1 (obstaclei)
+    gameover = true ;
+    endcause = 3 ;
+  }    
+  if (playery >= 283 && playery <= 323 && playerx >= obstacleii - 30 && playerx <= obstacleii) {                  //Crash Detection for Obstacle 2 (obstacleii)
+    gameover = true ;
+    endcause = 3 ; 
+  }
+  if (playery >= 356 && playery <= 396 && playerx >= obstacleiii - 30 && playerx <= obstacleiii) {                //Crash Detection for Obstacle 3 (obstacleiii)
+    gameover = true ;
+    endcause = 3 ;
+  }
+  if (playery >= 96 && playery <= 136 && playerx >= obstacleiv - 30 && playerx <= obstacleiv) {                   //Crash Detection for Obstacle 4 (obstacleiv)
+    gameover = true ;
+    endcause = 3 ;
+  }
+}
