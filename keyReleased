@@ -1,0 +1,27 @@
+void keyReleased () {
+  if (key == 'w' || key == 'W') {
+    playery = playery - 10 ;
+  }
+  if (key == 'd' || key == 'D') {
+    playerx = playerx + 10 ;
+  }
+  if (key == 's' || key == 'S') {
+    playery = playery + 10 ;
+  }
+  if (key == 'a' || key == 'A') {
+    playerx = playerx - 10 ;
+  }
+  //SPEED KEYS BELOW
+  if (key == 'i' || key == 'I') {
+    playery = playery - 30 ;
+  }
+  if (key == 'l' || key == 'L') {
+    playerx = playerx + 30 ;
+  }
+  if (key == 'k' || key == 'K') {
+    playery = playery + 30 ;
+  }
+  if (key == 'j' || key == 'J') {
+    playerx = playerx - 30 ;
+  }
+}
