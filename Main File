@@ -1,0 +1,47 @@
+boolean gameover = false ;
+boolean gamewon = false ;
+boolean moveleft = true ;
+int endcause = 0 ;
+int leftcount = 55 ;
+int playerx = 135 ;
+int playery = 560 ;
+int obstaclei = 275 ;
+int obstacleii = 575 ;
+int obstacleiii = 890 ;
+int obstacleiv = 890 ;
+
+void setup () {
+  size (900, 600) ;
+}
+
+void draw () {
+  background (255) ;
+  if (gameover == false && gamewon == false) {
+    blockmovement () ;
+    crashCheck () ;
+    stroke (255, 0, 0) ;
+    fill (255, 0, 0) ;
+    rect (playerx, playery, 30, 30) ;
+    stroke (0, 255, 0) ;
+    strokeWeight (10) ;
+    line (295, 100, 295, 600) ;
+    line (595, 500, 595, 4) ;
+    fill (255, 255, 0) ;
+    strokeWeight (0) ;
+    rect (602.5, 0, 297.5, 30) ;
+    fill (0) ;
+    textSize (20) ;
+    text ("WIN ZONE", 700, 25) ;
+    fill (0, 0, 255) ;
+    rect (obstaclei, 306, 10, 10) ; //Obstacle 1 (obstaclei) is the first block located within the first column
+    rect (obstacleii, 313, 10, 10) ; //Obstacle 2 (obstacleii) is the second block, the one locatede within the second column
+    rect (obstacleiii, 386, 10, 10) ; //Obstacle 3 (obstacleiii) is the lower down block located within the final column
+    rect (obstacleiv, 126, 10, 10) ; //Obstacle 4 (obstaceliv) is the higher block located closest to the win zone in the final column
+  }
+  if (gameover == true) {
+    gOver () ; //See tab EndScreens for the code enclosed within gOver
+  }
+  if (gamewon == true) {
+    gWon () ; //See tab EndScreens for the code enclosed within gWon
+  }
+}
